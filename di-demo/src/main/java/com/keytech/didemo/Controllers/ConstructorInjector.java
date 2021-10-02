@@ -1,7 +1,10 @@
 package com.keytech.didemo.Controllers;
 
+import org.springframework.stereotype.Controller;
+
 import com.keytech.didemo.Services.GreetingService;
 
+@Controller
 public class ConstructorInjector {
 
 	private GreetingService greetingService;
@@ -11,7 +14,7 @@ public class ConstructorInjector {
 		this.greetingService = greetingService;
 	}
 	
-	String sayHello() {
+	public String sayHello() {
 		return greetingService.sayGreeting();
 	}
 	
