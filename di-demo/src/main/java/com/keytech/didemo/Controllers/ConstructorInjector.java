@@ -1,18 +1,18 @@
 package com.keytech.didemo.Controllers;
 
-import com.keytech.didemo.Services.GreetingServiceImpl;
+import com.keytech.didemo.Services.GreetingService;
 
 public class ConstructorInjector {
 
-	private GreetingServiceImpl greetingServiceImpl;
+	private GreetingService greetingService;
 
-	public ConstructorInjector(GreetingServiceImpl greetingServiceImpl) {
+	public ConstructorInjector(GreetingService greetingService) {
 		super();
-		this.greetingServiceImpl = greetingServiceImpl;
+		this.greetingService = greetingService;
 	}
 	
 	String sayHello() {
-		return greetingServiceImpl.sayGreeting();
+		return greetingService.sayGreeting();
 	}
 	
 }
