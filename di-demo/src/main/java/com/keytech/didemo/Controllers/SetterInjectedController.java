@@ -8,13 +8,13 @@ import com.keytech.didemo.Services.GreetingService;
 @Controller
 public class SetterInjectedController {
 
-	@Autowired
 	private GreetingService greetingService;
 	
 	public String sayHello() {
 		return greetingService.sayGreeting();
 	}
 
+	@Autowired
 	public void setGreetingService(GreetingService greetingService) {
 		this.greetingService = greetingService;
 	}
