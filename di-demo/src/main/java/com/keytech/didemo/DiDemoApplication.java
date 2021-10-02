@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import com.keytech.didemo.Controllers.MyController;
+import com.keytech.didemo.Controllers.SetterInjectedController;
 
 @SpringBootApplication
 public class DiDemoApplication {
@@ -16,6 +17,8 @@ public class DiDemoApplication {
 		MyController controller = (MyController) ctx.getBean("myController");
 		
 		controller.hello();
+		
+		System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
 		
 	}
 
