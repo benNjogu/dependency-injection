@@ -1,14 +1,19 @@
 package com.keytech.didemo.Controllers;
 
-import com.keytech.didemo.Services.GreetingServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
+import com.keytech.didemo.Services.GreetingService;
+
+@Controller
 public class PropertyInjectedController {
 	
-	public GreetingServiceImpl greetingServiceImpl;
+	@Autowired
+	public GreetingService greetingService;
 	
-	String sayHello() {
+	public String sayHello() {
 		
-		return greetingServiceImpl.sayGreeting();
+		return greetingService.sayGreeting();
 		
 	}
 
