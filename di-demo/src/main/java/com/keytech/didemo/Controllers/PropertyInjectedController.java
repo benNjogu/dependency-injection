@@ -1,6 +1,7 @@
 package com.keytech.didemo.Controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import com.keytech.didemo.Services.GreetingService;
@@ -9,6 +10,7 @@ import com.keytech.didemo.Services.GreetingService;
 public class PropertyInjectedController {
 	
 	@Autowired
+	@Qualifier("greetingServiceImpl")
 	public GreetingService greetingService;
 	
 	public String sayHello() {

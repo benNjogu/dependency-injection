@@ -27,7 +27,7 @@ public class DiDemoApplication {
 		//property injection
 		PropertyInjectedController pController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
 		String preacherString = pController.sayHello();
-		System.out.println(preacherString+" there there");
+		System.out.println(preacherString);
 		
 		//constructor injection
 		System.out.println(ctx.getBean(ConstructorInjector.class).sayHello());
