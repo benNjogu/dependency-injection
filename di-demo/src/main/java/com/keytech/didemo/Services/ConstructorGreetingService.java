@@ -1,5 +1,7 @@
 package com.keytech.didemo.Services;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
 @Service
