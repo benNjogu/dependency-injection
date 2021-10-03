@@ -18,8 +18,8 @@ public class DiDemoApplication {
 		
 		MyController controller = (MyController) ctx.getBean("myController");
 		
-		controller.hello();
-		
+//		controller.hello();
+		System.out.println(controller.hello());
 		//setter injection
 		System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
 		//System.out.println(ctx.getBean("propertyInjectedController").sayHello());

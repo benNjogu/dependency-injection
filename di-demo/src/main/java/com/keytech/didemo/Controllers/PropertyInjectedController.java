@@ -10,12 +10,12 @@ import com.keytech.didemo.Services.GreetingService;
 public class PropertyInjectedController {
 	
 	@Autowired
-//	@Qualifier("greetingServiceImpl")
-	public GreetingService greetingServiceImpl;
+	@Qualifier("greetingServiceImpl")
+	public GreetingService greetingService;
 	
 	public String sayHello() {
 		
-		return greetingServiceImpl.sayGreeting();
+		return greetingService.sayGreeting();
 		
 	}
 
