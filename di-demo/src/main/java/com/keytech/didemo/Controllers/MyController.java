@@ -1,6 +1,5 @@
 package com.keytech.didemo.Controllers;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Controller;
 
 import com.keytech.didemo.Services.GreetingService;
@@ -14,7 +13,6 @@ public class MyController {
 		super();
 		this.greetingService = greetingService;
 	}
-
 
 	public String hello() {
 		System.out.println("Helloooo!!!!");

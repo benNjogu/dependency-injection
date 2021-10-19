@@ -6,9 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.keytech.didemo.Repository.GreetingRepository;
 
-@Service
-@Primary
-@Profile("en")
+
 public class PrimaryGreetingService implements GreetingService{
 
 	private GreetingRepository greetingRepository;

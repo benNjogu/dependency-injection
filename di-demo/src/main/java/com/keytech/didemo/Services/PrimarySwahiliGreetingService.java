@@ -7,13 +7,17 @@ import org.springframework.stereotype.Service;
 
 import com.keytech.didemo.Repository.GreetingRepository;
 
-@Service
-@Primary
-@Profile({"sw", "default"})
 public class PrimarySwahiliGreetingService implements GreetingService{
 
-	@Autowired
 	private GreetingRepository greetingRepository;
+	
+	
+	public PrimarySwahiliGreetingService(GreetingRepository greetingRepository) {
+		super();
+		this.greetingRepository = greetingRepository;
+	}
+
+
 
 	@Override
 	public String sayGreeting() {

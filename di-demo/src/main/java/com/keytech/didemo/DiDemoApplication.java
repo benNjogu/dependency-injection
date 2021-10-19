@@ -3,6 +3,7 @@ package com.keytech.didemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 import com.keytech.didemo.Controllers.ConstructorInjector;
 import com.keytech.didemo.Controllers.MyController;
@@ -10,6 +11,7 @@ import com.keytech.didemo.Controllers.PropertyInjectedController;
 import com.keytech.didemo.Controllers.SetterInjectedController;
 
 @SpringBootApplication
+@ComponentScan("com.keytech")
 public class DiDemoApplication {
 
 	public static void main(String[] args) {
