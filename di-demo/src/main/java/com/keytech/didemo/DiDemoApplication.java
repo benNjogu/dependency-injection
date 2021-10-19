@@ -10,6 +10,7 @@ import com.keytech.didemo.Controllers.MyController;
 import com.keytech.didemo.Controllers.PropertyInjectedController;
 import com.keytech.didemo.Controllers.SetterInjectedController;
 import com.keytech.didemo.ExampleBeans.FakeDataSource;
+import com.keytech.didemo.ExampleBeans.FakeJMSBroker;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.keytech", "com.keytech.didemo.ExampleBeans"})
@@ -23,6 +24,9 @@ public class DiDemoApplication {
 		
 		FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
 		System.out.println(fakeDataSource.getUser());
+		
+		FakeJMSBroker fakeJMSBroker = ctx.getBean(FakeJMSBroker.class);
+		System.out.println(fakeJMSBroker.getUserName());
 		
 	}
 

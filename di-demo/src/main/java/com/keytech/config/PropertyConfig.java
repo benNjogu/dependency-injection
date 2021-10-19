@@ -9,9 +9,10 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
 
 import com.keytech.didemo.ExampleBeans.FakeDataSource;
+import com.keytech.didemo.ExampleBeans.FakeJMSBroker;
 
 @Configuration
-@PropertySource("classpath:datasource.properties")
+@PropertySource({"classpath:datasource.properties","classpath:jms.properies"})
 public class PropertyConfig {
 
 	@Autowired
@@ -24,6 +25,14 @@ public class PropertyConfig {
 	@Value("${keyman.dburl}")
 	String url;
 	
+	
+	@Value("${keyman.jms.username}")
+	String jmsuser;
+	@Value("${keyman.jms.password}")
+	String jmspassword;
+	@Value("${keyman.jms.dburl}")
+	String jmsurl;
+	
 	@Bean
 	public FakeDataSource fakeDataSource() {
 		FakeDataSource fakeDataSource = new FakeDataSource();
@@ -31,6 +40,16 @@ public class PropertyConfig {
 		fakeDataSource.setPassword(password);
 		fakeDataSource.setUrl(url);
 		return fakeDataSource;
+	}
+	
+	@Bean
+	public FakeJMSBroker fakeJMSBroker() {
+		FakeJMSBroker fakeJMSBroker = new FakeJMSBroker();
+		fakeJMSBroker.setUserName(user);
+		fakeJMSBroker.setPassword(password);
+		fakeJMSBroker.setUrl(url);
+		
+		return fakeJMSBroker;
 	}
 	
 	@Bean
