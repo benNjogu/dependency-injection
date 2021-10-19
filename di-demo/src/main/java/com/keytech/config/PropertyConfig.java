@@ -13,15 +13,7 @@ import com.keytech.didemo.ExampleBeans.FakeDataSource;
 import com.keytech.didemo.ExampleBeans.FakeJMSBroker;
 
 @Configuration
-//@PropertySource({"classpath:datasource.properties","classpath:jms.properies"})
-@PropertySources({
-		@PropertySource("classpath:datasource.properties"),
-		@PropertySource("classpath:jms.properies")
-})
 public class PropertyConfig {
-
-	@Autowired
-	Environment env;
 
 	@Value("${keyman.username}")
 	String user;
@@ -40,7 +32,7 @@ public class PropertyConfig {
 	@Bean
 	public FakeDataSource fakeDataSource() {
 		FakeDataSource fakeDataSource = new FakeDataSource();
-		fakeDataSource.setUser(env.getProperty("USERNAME"));
+		fakeDataSource.setUser(user);
 		fakeDataSource.setPassword(password);
 		fakeDataSource.setUrl(url);
 		return fakeDataSource;
@@ -49,17 +41,12 @@ public class PropertyConfig {
 	@Bean
 	public FakeJMSBroker fakeJMSBroker() {
 		FakeJMSBroker fakeJMSBroker = new FakeJMSBroker();
-		fakeJMSBroker.setUserName(user);
-		fakeJMSBroker.setPassword(password);
-		fakeJMSBroker.setUrl(url);
+		fakeJMSBroker.setUserName(jmsuser);
+		fakeJMSBroker.setPassword(jmspassword);
+		fakeJMSBroker.setUrl(jmsurl);
 
 		return fakeJMSBroker;
 	}
 
-	@Bean
-	public static PropertySourcesPlaceholderConfigurer properties() {
-		PropertySourcesPlaceholderConfigurer placeholderConfigurer = new PropertySourcesPlaceholderConfigurer();
-		return placeholderConfigurer;
-	}
 
 }

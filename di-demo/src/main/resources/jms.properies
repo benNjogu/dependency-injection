@@ -1,3 +1,0 @@
-keyman.jms.username = jim
-keyman.jms.password = 123#$%
-keyman.jms.dburl = http:mydatabase.frombroker
