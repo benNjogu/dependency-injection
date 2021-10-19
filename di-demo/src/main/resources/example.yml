@@ -1,0 +1,51 @@
+#this is a comment
+name: ben
+
+names:  #you can add an inline comment anywhere
+  -ben
+  -alice
+  -jane
+  -martha
+  -mary
+  
+pound_sign: "#"
+
+book: 
+    author: Maxwell Matz
+    publisher: Long Horn Publishers
+    
+truth: yes
+
+another_truth: True
+
+more_truth: true
+
+false: no #No, false, FALSE
+
+string_val: "This is it's quote"
+      
+colon_string : "My courses : one two three"
+
+include_new_lines: 
+    I wasn't just born
+    to die and leave
+    this earth 
+    UNRECOGNIZED!!!
+    
+ignore_new_lines: 
+    this is a one 
+    very very 
+    long sentence!      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
