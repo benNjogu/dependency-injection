@@ -3,3 +3,12 @@ keyman:
     username:  Jim
     password:  123#$%
     dburl:  http:mydatabase.frombroker
+    
+---
+spring:
+  profiles: de
+  
+keyman: 
+  jms:
+    username:  Jim $$$$$$$  
+  
