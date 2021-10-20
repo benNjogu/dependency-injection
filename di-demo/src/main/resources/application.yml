@@ -1,0 +1,5 @@
+keyman: 
+  jms:
+    username:  Jim
+    password:  123#$%
+    dburl:  http:mydatabase.frombroker
